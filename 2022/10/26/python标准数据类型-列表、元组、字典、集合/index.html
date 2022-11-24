@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Python默认拥有以下内置数据类型   文本类型 str    数值类型 int，float，complex   序列类型 list，tuple，range   映射类型 dict   集合类型 set，frozenset   布尔类型 bool   二进制类型 bytes，bytearray，memoryview   四种集合数据类型 列表（List）：有序可改变的集合，允许重复的成员">
+  <meta name="description" content="python标准数据类型-列表、元组、字典、集合">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python标准数据类型-列表、元组、字典、集合">
 <meta property="og:url" content="http://example.com/2022/10/26/python%E6%A0%87%E5%87%86%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E3%80%81%E5%85%83%E7%BB%84%E3%80%81%E5%AD%97%E5%85%B8%E3%80%81%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="决明的博客">
-<meta property="og:description" content="Python默认拥有以下内置数据类型   文本类型 str    数值类型 int，float，complex   序列类型 list，tuple，range   映射类型 dict   集合类型 set，frozenset   布尔类型 bool   二进制类型 bytes，bytearray，memoryview   四种集合数据类型 列表（List）：有序可改变的集合，允许重复的成员">
+<meta property="og:description" content="python标准数据类型-列表、元组、字典、集合">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-25T17:08:32.000Z">
-<meta property="article:modified_time" content="2022-10-27T06:23:20.450Z">
+<meta property="article:modified_time" content="2022-10-27T15:52:41.955Z">
 <meta property="article:author" content="决明">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-27 14:23:20" itemprop="dateModified" datetime="2022-10-27T14:23:20+08:00">2022-10-27</time>
+                <time title="修改时间：2022-10-27 23:52:41" itemprop="dateModified" datetime="2022-10-27T23:52:41+08:00">2022-10-27</time>
               </span>
 
           
@@ -194,7 +194,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-         <span id="more"></span>
+        <h1 id="python标准数据类型-列表、元组、字典、集合"><a href="#python标准数据类型-列表、元组、字典、集合" class="headerlink" title="python标准数据类型-列表、元组、字典、集合"></a>python标准数据类型-列表、元组、字典、集合</h1> <span id="more"></span>
 
 <h1 id="Python默认拥有以下内置数据类型"><a href="#Python默认拥有以下内置数据类型" class="headerlink" title="Python默认拥有以下内置数据类型"></a>Python默认拥有以下内置数据类型</h1><table>
 <thead>
@@ -407,6 +407,97 @@
 </li>
 </ul>
 </blockquote>
+<h3 id="四、集合"><a href="#四、集合" class="headerlink" title="四、集合"></a>四、集合</h3><h4 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h4><p>无序的不重复元素的序列，用**{}<strong>或</strong>set()** 函数创建</p>
+<p><em>注意</em>：创建一个空集合必须用set()而不是{}，因为{}是用来创建一个空字典。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fruit=&#123;<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;banana&#x27;</span>,<span class="string">&#x27;banana&#x27;</span>&#125;<span class="comment">#&#123;&#x27;apple&#x27;,&#x27;banana&#x27;&#125;set会去重</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="操作-2"><a href="#操作-2" class="headerlink" title="操作"></a>操作</h4><p>1）集合对象支持的方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add(x)</td>
+<td>添加元素</td>
+</tr>
+<tr>
+<td>update(x)</td>
+<td>添加元素，x可以有多个</td>
+</tr>
+<tr>
+<td>remove(x)</td>
+<td>移除x元素，如果不存在，发生错误</td>
+</tr>
+<tr>
+<td>discard(x)</td>
+<td>移除x元素，如果不存在，不发生错误</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>随机删除集合中的一个元素</td>
+</tr>
+<tr>
+<td>len(s)</td>
+<td>计算集合s元素个数</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>清空集合</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>拷贝</td>
+</tr>
+<tr>
+<td>union()</td>
+<td>返回包含两个项目中所有项目的<strong>新集合</strong></td>
+</tr>
+<tr>
+<td>update(x)</td>
+<td>将x集合中所有项目插入集合中</td>
+</tr>
+<tr>
+<td>difference(x)</td>
+<td>返回x集合与集合的差异的集合</td>
+</tr>
+<tr>
+<td>difference_update(x)</td>
+<td>与difference相比在于直接操作集合，而非返回一个集合</td>
+</tr>
+<tr>
+<td>intersection(x)</td>
+<td>返回两个集合之间相似性的集合</td>
+</tr>
+<tr>
+<td>intersection_update(x)</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>isdisjoint(x)</td>
+<td>若有相同项目，返回true，否则false</td>
+</tr>
+<tr>
+<td>issubset(x)</td>
+<td>如果x集合包含集合，返回true，否则false</td>
+</tr>
+<tr>
+<td>issuperset(x)</td>
+<td>如果集合包含x集合，返回true，否则false</td>
+</tr>
+<tr>
+<td>symmetric_difference()</td>
+<td>返回除相同项目外的所有项目</td>
+</tr>
+<tr>
+<td>symmetric_difference_update()</td>
+<td>同上</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=&#123;<span class="string">&#x27;apple&#x27;</span>,<span class="string">&#x27;banana&#x27;</span>,<span class="string">&#x27;cherry&#x27;</span>&#125;</span><br><span class="line">y=&#123;<span class="string">&#x27;google&#x27;</span>,<span class="string">&#x27;bing&#x27;</span>,<span class="string">&#x27;apple&#x27;</span>&#125;</span><br><span class="line">z=x.difference(y)<span class="comment">#&#123;&#x27;banban&#x27;,&#x27;cherry&#x27;&#125;</span></span><br><span class="line">w=y.difference(x)<span class="comment">#&#123;&#x27;google&#x27;,&#x27;bing&#x27;&#125;</span></span><br><span class="line">u=x.intersection(x)<span class="comment">#&#123;&#x27;apple&#x27;&#125;</span></span><br><span class="line">x.difference_update(y)</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -484,7 +575,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E9%BB%98%E8%AE%A4%E6%8B%A5%E6%9C%89%E4%BB%A5%E4%B8%8B%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">Python默认拥有以下内置数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">四种集合数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%88%97%E8%A1%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%83%E7%BB%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、元组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-1"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AD%97%E5%85%B8"><span class="nav-number">1.1.3.</span> <span class="nav-text">三、字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python%E6%A0%87%E5%87%86%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E3%80%81%E5%85%83%E7%BB%84%E3%80%81%E5%AD%97%E5%85%B8%E3%80%81%E9%9B%86%E5%90%88"><span class="nav-number">1.</span> <span class="nav-text">python标准数据类型-列表、元组、字典、集合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E9%BB%98%E8%AE%A4%E6%8B%A5%E6%9C%89%E4%BB%A5%E4%B8%8B%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">Python默认拥有以下内置数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">四种集合数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%88%97%E8%A1%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">一、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%83%E7%BB%84"><span class="nav-number">2.1.2.</span> <span class="nav-text">二、元组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-1"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AD%97%E5%85%B8"><span class="nav-number">2.1.3.</span> <span class="nav-text">三、字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%9B%86%E5%90%88"><span class="nav-number">2.1.4.</span> <span class="nav-text">四、集合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="nav-number">2.1.4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-2"><span class="nav-number">2.1.4.2.</span> <span class="nav-text">操作</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
